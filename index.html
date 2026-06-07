@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Third Culture Compass — Free Guides for Students Navigating Multiple School Systems</title>
+<meta name="description" content="Practical guides, curriculum comparisons, and real stories for students who've moved between school systems — Nigeria, Malaysia, California, Virginia, and beyond. Written by someone who did it.">
+<meta name="keywords" content="WAEC US credits, SPM GPA conversion, international student transcript, third culture kid, transfer student guide, Nigerian curriculum US, Malaysian school system">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Third Culture Compass — For Students Who've Moved Between Worlds">
+<meta property="og:description" content="Practical guides for students navigating multiple school systems. WAEC, SPM, US credits, transcript gaps — written by someone who went through Nigeria, Malaysia, California, and Virginia.">
+<meta property="og:image" content="og-image.svg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Third Culture Compass">
+<meta name="twitter:description" content="Free guides for students navigating multiple school systems. Written by a Third Culture Kid.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* HOME-ONLY */
+.hero { padding: 6rem 2rem 5rem; max-width: 820px; margin: 0 auto; text-align: center; }
+.hero-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); background: var(--green-light); padding: 5px 14px; border-radius: 100px; margin-bottom: 2rem; }
+.hero-tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+.hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.8rem, 6vw, 4.2rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.035em; margin-bottom: 1.5rem; }
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--green); }
+.hero-sub { font-size: 18px; color: var(--ink-60); max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.7; font-weight: 300; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+.btn-dark { background: var(--ink); color: white; padding: 13px 30px; border-radius: 100px; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 0.15s; }
+.btn-dark:hover { opacity: 0.75; }
+.btn-outline { background: transparent; color: var(--ink); padding: 13px 26px; border-radius: 100px; font-size: 15px; font-weight: 400; text-decoration: none; border: 1px solid var(--ink-20); transition: border-color 0.15s; }
+.btn-outline:hover { border-color: var(--ink); }
+.route-strip { display: inline-flex; align-items: center; gap: 8px; background: var(--sand); border-radius: 100px; padding: 10px 20px; font-size: 14px; color: var(--ink-60); flex-wrap: wrap; justify-content: center; }
+.route-strip .arrow { font-size: 12px; opacity: 0.4; }
+
+/* DIVIDER + STATS */
+.divider { border: none; border-top: 1px solid var(--ink-20); }
+.stats { display: flex; justify-content: center; border-bottom: 1px solid var(--ink-20); flex-wrap: wrap; }
+.stat-item { padding: 2.5rem 3rem; border-right: 1px solid var(--ink-20); text-align: center; flex: 1; min-width: 140px; }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 12px; color: var(--ink-60); }
+
+/* SECTION */
+.section { padding: 5rem 2rem; }
+.section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; margin-bottom: 0.6rem; }
+.label-green { color: var(--green); }
+.label-amber { color: var(--amber); }
+.section-heading { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.75rem; }
+.section-sub { font-size: 15px; color: var(--ink-60); max-width: 500px; font-weight: 300; line-height: 1.7; margin-bottom: 2.5rem; }
+
+/* FOUNDER */
+.founder-block { background: var(--ink); color: white; border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.3fr; }
+.founder-left { padding: 3rem; border-right: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+.founder-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 1.5rem; }
+.founder-quote { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 400; font-style: italic; line-height: 1.5; color: rgba(255,255,255,0.92); }
+.founder-route { display: flex; flex-direction: column; gap: 8px; }
+.route-line { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+.route-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; margin-top: 6px; }
+.founder-right { padding: 3rem; }
+.founder-right-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.35); margin-bottom: 1.5rem; }
+.moment-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem; margin-bottom: 0.75rem; }
+.moment-num { font-size: 10px; font-weight: 500; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+.moment-text { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.65; }
+.moment-card.hl { background: rgba(31,107,74,0.2); border-color: rgba(31,107,74,0.4); }
+.moment-tag { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; margin-top: 8px; background: var(--green); color: white; }
+
+/* GUIDES */
+.guides-header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+.guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--ink-20); border: 1px solid var(--ink-20); border-radius: 14px; overflow: hidden; }
+.guide-card { background: var(--white); padding: 1.75rem; text-decoration: none; color: var(--ink); transition: background 0.15s; display: flex; flex-direction: column; position: relative; }
+.guide-card:hover { background: var(--sand); }
+.guide-card.featured { background: #FAFAF0; }
+.guide-card.featured:hover { background: var(--sand); }
+.featured-dot { position: absolute; top: 1rem; right: 1rem; font-size: 10px; font-weight: 500; background: var(--amber); color: white; padding: 2px 8px; border-radius: 100px; letter-spacing: 0.05em; }
+.guide-system { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; padding: 3px 10px; border-radius: 100px; margin-bottom: 1rem; width: fit-content; }
+.sys-ng { background: #FEF3C7; color: #92400E; }
+.sys-my { background: #ECFDF5; color: #065F46; }
+.sys-ca { background: #EFF6FF; color: #1E40AF; }
+.sys-all { background: var(--sand); color: var(--ink-60); }
+.guide-title { font-family: 'Fraunces', serif; font-weight: 500; font-size: 1.05rem; line-height: 1.3; margin-bottom: 0.6rem; letter-spacing: -0.01em; flex: 1; }
+.guide-desc { font-size: 13px; color: var(--ink-60); line-height: 1.65; margin-bottom: 1.25rem; }
+.guide-meta { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--ink-20); font-size: 12px; color: var(--ink-60); }
+.guide-arrow { font-size: 14px; transition: transform 0.15s; }
+.guide-card:hover .guide-arrow { transform: translateX(4px); }
+
+/* COMPARE */
+.compare-wrap { background: var(--white); border: 1px solid var(--ink-20); border-radius: 14px; overflow: hidden; }
+.compare-controls { padding: 1.25rem 1.75rem; border-bottom: 1px solid var(--ink-20); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.compare-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 500; }
+.toggle-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.toggle-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 100px; border: 1px solid var(--ink-20); background: white; color: var(--ink-60); cursor: pointer; transition: all 0.15s; }
+.toggle-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+.compare-table { width: 100%; border-collapse: collapse; }
+.compare-table th { background: #FAFAF7; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-60); font-weight: 500; padding: 10px 1.5rem; text-align: left; border-bottom: 1px solid var(--ink-20); }
+.compare-table td { padding: 13px 1.5rem; font-size: 13px; border-bottom: 1px solid var(--ink-20); vertical-align: top; line-height: 1.55; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:hover td { background: #FAFAF7; }
+.td-cat { font-weight: 500; color: var(--ink); width: 150px; }
+.badge { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 100px; white-space: nowrap; }
+.badge-gap { background: #FEE2E2; color: #991B1B; }
+.badge-ok { background: #D1FAE5; color: #065F46; }
+.badge-varies { background: #FEF3C7; color: #92400E; }
+
+/* STORY COLLECTION */
+.story-collect-hero { background: var(--ink); color: white; border-radius: 16px; padding: 3rem; text-align: center; margin-bottom: 2rem; }
+.story-collect-hero h2 { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.03em; color: white; margin-bottom: 0.75rem; }
+.story-collect-hero p { color: rgba(255,255,255,0.65); font-size: 15px; font-weight: 300; line-height: 1.7; max-width: 500px; margin: 0 auto 2rem; }
+.story-prompts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; margin-bottom: 2rem; text-align: left; }
+.story-prompt-chip { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 0.9rem 1rem; font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; font-style: italic; font-family: 'Fraunces', serif; }
+.story-form-inline { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; max-width: 500px; margin: 0 auto; }
+.story-email-field { font-family: 'DM Sans', sans-serif; flex: 1; min-width: 220px; padding: 12px 18px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: 14px; outline: none; }
+.story-email-field::placeholder { color: rgba(255,255,255,0.4); }
+.story-email-field:focus { border-color: rgba(255,255,255,0.4); }
+.btn-ink { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 12px 24px; border-radius: 100px; background: var(--ink); color: white; border: none; cursor: pointer; transition: opacity 0.15s; white-space: nowrap; }
+.btn-ink:hover { opacity: 0.8; }
+.story-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.story-card-placeholder { background: var(--sand); border: 1px dashed var(--ink-20); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 140px; }
+.story-card-placeholder p { font-size: 14px; color: var(--ink-60); line-height: 1.6; font-weight: 300; margin-bottom: 0.5rem; }
+.story-card-placeholder small { font-size: 12px; color: var(--ink-60); opacity: 0.6; }
+
+/* RESEARCH BANNER */
+.research-banner { background: var(--ink); color: white; border-radius: 16px; padding: 2.5rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
+.research-banner h3 { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
+.research-banner p { font-size: 14px; color: rgba(255,255,255,0.6); font-weight: 300; line-height: 1.6; }
+.btn-white { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 11px 22px; border-radius: 100px; background: white; color: var(--ink); text-decoration: none; white-space: nowrap; transition: opacity 0.15s; display: inline-block; }
+.btn-white:hover { opacity: 0.85; }
+
+/* NEWSLETTER */
+.signup-block { background: var(--green); color: white; border-radius: 16px; padding: 4rem 3rem; text-align: center; }
+.signup-block h2 { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.75rem; color: white; }
+.signup-block p { color: rgba(255,255,255,0.7); margin-bottom: 2rem; font-size: 15px; font-weight: 300; }
+.email-row { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; max-width: 440px; margin: 0 auto 1rem; }
+.email-field { font-family: 'DM Sans', sans-serif; flex: 1; min-width: 220px; padding: 12px 18px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.12); color: white; font-size: 14px; outline: none; }
+.email-field::placeholder { color: rgba(255,255,255,0.45); }
+.email-field:focus { border-color: rgba(255,255,255,0.5); }
+.email-submit { font-family: 'DM Sans', sans-serif; padding: 12px 24px; border-radius: 100px; background: var(--ink); color: white; font-size: 14px; font-weight: 500; border: none; cursor: pointer; transition: opacity 0.15s; white-space: nowrap; }
+.email-submit:hover { opacity: 0.8; }
+.email-note { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+/* ABOUT */
+.about-strip { background: var(--green-light); border-top: 1px solid rgba(31,107,74,0.15); border-bottom: 1px solid rgba(31,107,74,0.15); padding: 3.5rem 2rem; }
+.about-inner { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.about-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); font-weight: 500; margin-bottom: 0.75rem; }
+.about-text { font-size: 15px; color: var(--ink); line-height: 1.75; font-weight: 300; }
+.about-text strong { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .founder-block { grid-template-columns: 1fr; }
+  .founder-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .stat-item { padding: 1.75rem 1.5rem; }
+  .research-banner { grid-template-columns: 1fr; }
+  .signup-block { padding: 3rem 1.5rem; }
+  .story-collect-hero { padding: 2rem 1.5rem; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQ8YRN0RBS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FQ8YRN0RBS');
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-circle">🧭</div>
+    <span class="nav-logo-name">Third Culture Compass</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#guides">Guides</a></li>
+    <li><a href="#compare">Compare</a></li>
+    <li><a href="compass.html">Identity Compass</a></li>
+    <li><a href="story.html">Our Story</a></li>
+    <li><a href="learning.html">What We're Learning</a></li>
+    <li><a href="survey.html">Survey</a></li>
+    <li><a href="#newsletter" class="nav-pill">Get updates</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#guides" onclick="toggleMenu()">Guides</a>
+  <a href="#compare" onclick="toggleMenu()">Compare</a>
+  <a href="compass.html">Identity Compass</a>
+  <a href="story.html">Our Story</a>
+  <a href="learning.html">What We're Learning</a>
+  <a href="survey.html">Research Survey</a>
+  <a href="#newsletter" onclick="toggleMenu()">Get updates →</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Built by a Third Culture Kid, for Third Culture Kids</div>
+  <h1>For the ones who were<br>never quite <em>there yet.</em></h1>
+  <p class="hero-sub">You've moved between worlds. You know what it feels like to sit in a room where everyone already has their people — and not know how to signal that you want to join. The guides here are written from that exact feeling.</p>
+  <div class="hero-btns">
+    <a href="story.html" class="btn-dark">Read the story →</a>
+    <a href="compass.html" class="btn-outline">Take the Identity Compass</a>
+  </div>
+  <div class="route-strip">
+    <span>🇳🇬</span><span class="arrow">→</span>
+    <span>🇲🇾</span><span class="arrow">→</span>
+    <span>California</span><span class="arrow">→</span>
+    <span>Virginia</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="stats">
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">school systems covered</div></div>
+  <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">free guides published</div></div>
+  <div class="stat-item"><div class="stat-num">Free</div><div class="stat-label">always, no exceptions</div></div>
+  <div class="stat-item"><div class="stat-num">Real</div><div class="stat-label">no templates, no guessing</div></div>
+</div>
+
+<!-- COMPASS CTA -->
+<div style="background: var(--ink); padding: 2.5rem 2rem;">
+  <div class="container" style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:2rem;flex-wrap:wrap">
+    <div>
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.4);font-weight:500;margin-bottom:0.5rem">New — Identity Compass</div>
+      <div style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:500;color:white;margin-bottom:0.4rem">What kind of cultural navigator are you?</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.55);font-weight:300">7 questions. Based on how you actually move through new environments.</div>
+    </div>
+    <a href="compass.html" style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;padding:12px 24px;border-radius:100px;background:var(--green);color:white;text-decoration:none;white-space:nowrap;flex-shrink:0">Take the quiz →</a>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<div class="section container">
+  <div class="section-label label-green">Why this exists</div>
+  <h2 class="section-heading">Built by someone who kept starting over</h2>
+  <p class="section-sub">Not a counselor. Not a nonprofit. A student who moved through Nigeria, Malaysia, California, and Virginia — and figured most of it out alone, the hard way.</p>
+  <div class="founder-block">
+    <div class="founder-left">
+      <div>
+        <div class="founder-eyebrow">Founded by a Third Culture Kid</div>
+        <div class="founder-quote">"It was rough. But I always kept a positive attitude. I think at some point I became numb to starting over — making new friends, building new routines, figuring out who I was in a place that didn't know me yet."</div>
+      </div>
+      <div class="founder-route">
+        <div class="route-line"><span class="route-dot"></span><span><strong style="color:white">Nigeria</strong> — primary school. Skipped 4th grade. Left before secondary.</span></div>
+        <div class="route-line"><span class="route-dot"></span><span><strong style="color:white">Malaysia</strong> — grades 7, 8, 9. Three years in the Malaysian system.</span></div>
+        <div class="route-line"><span class="route-dot"></span><span><strong style="color:white">San Francisco, CA</strong> — California rejected the 9th grade credits. School wanted 8th. Pleaded to stay in 9th. Wrong PE class for 4 days.</span></div>
+        <div class="route-line"><span class="route-dot"></span><span><strong style="color:white">Amherst, VA</strong> — 11th grade. First question everyone asks: why did you move from SF to <em>here</em>?</span></div>
+      </div>
+    </div>
+    <div class="founder-right">
+      <div class="founder-right-label">The moments that built this site</div>
+      <div class="moment-card">
+        <div class="moment-num">The reset</div>
+        <div class="moment-text">In Malaysia, teachers came to your classroom. First week in California, I was following a kid from my first period just to figure out where to go. Walked into the wrong PE class and stayed four days before saying anything. Also — they rejected my 9th grade credits entirely. School wanted to put me in 8th. I had to argue my way into 9th.</div>
+      </div>
+      <div class="moment-card">
+        <div class="moment-num">The advice that missed</div>
+        <div class="moment-text">A counselor kept telling me to join a club or a sport. Over and over. She didn't realize I wasn't avoiding it — I just didn't belong yet. You can't force belonging. It doesn't work like that.</div>
+      </div>
+      <div class="moment-card hl">
+        <div class="moment-num">What nobody talks about</div>
+        <div class="moment-text">After enough resets, you don't stop making friends — you just get numb to it. You know how to start. You know how it ends when you move again. That numbness is real, and nobody warned me about it.</div>
+        <span class="moment-tag">The mission</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GUIDES -->
+<div class="section container" id="guides">
+  <div class="guides-header">
+    <div>
+      <div class="section-label label-amber">Start here</div>
+      <h2 class="section-heading" style="margin-bottom:0">Guides written from lived experience</h2>
+    </div>
+  </div>
+  <p class="section-sub">Every guide comes from a moment where the right information didn't exist — so someone had to figure it out the hard way. No templates. No guessing.</p>
+
+  <div class="guides-grid">
+    <a href="guides/nigeria-to-us.html" class="guide-card featured">
+      <span class="featured-dot">Start here</span>
+      <span class="guide-system sys-ng">🇳🇬 Nigeria → US</span>
+      <div class="guide-title">What No One Tells You About Moving from a Nigerian Curriculum to US Credits</div>
+      <div class="guide-desc">The subjects don't map. The grading scale confuses counselors. Your Further Mathematics result has no box. Here's what to say when your transcript lands on a desk that's never seen WAEC.</div>
+      <div class="guide-meta"><span>8 min read</span><span class="guide-arrow">→</span></div>
+    </a>
+    <a href="guides/spm-to-gpa.html" class="guide-card">
+      <span class="guide-system sys-my">🇲🇾 Malaysia → US</span>
+      <div class="guide-title">SPM to GPA: How to Translate Your Malaysian Results for US Schools</div>
+      <div class="guide-desc">Your Additional Mathematics is probably more advanced than what your new classmates are doing. The problem is nobody knows that. Here's the language to explain it yourself.</div>
+      <div class="guide-meta"><span>7 min read</span><span class="guide-arrow">→</span></div>
+    </a>
+    <a href="guides/transcript-gaps.html" class="guide-card">
+      <span class="guide-system sys-all">✦ Transcripts</span>
+      <div class="guide-title">The Transcript Gap Problem — and How to Talk About It</div>
+      <div class="guide-desc">Missing semesters, mid-year moves, COVID disruptions. A real script for explaining what happened — without sounding defensive, without minimizing what you went through.</div>
+      <div class="guide-meta"><span>6 min read</span><span class="guide-arrow">→</span></div>
+    </a>
+    <a href="guides/join-a-club.html" class="guide-card">
+      <span class="guide-system sys-all">✦ Community</span>
+      <div class="guide-title">The "Join a Club" Advice Doesn't Work If You Don't Belong Yet</div>
+      <div class="guide-desc">Everyone says it. What they don't say is that groups form before you arrive. What actually helps — from someone who started over more than once.</div>
+      <div class="guide-meta"><span>5 min read</span><span class="guide-arrow">→</span></div>
+    </a>
+    <a href="guides/ca-to-va.html" class="guide-card">
+      <span class="guide-system sys-ca">🏴󠁵󠁳󠁣󠁡󠁿 CA → VA</span>
+      <div class="guide-title">Even Moving Within the US Can Derail Your Credits</div>
+      <div class="guide-desc">San Francisco to Amherst. Same country, completely different world. Different graduation requirements, different course names, and questions nobody prepared you for.</div>
+      <div class="guide-meta"><span>5 min read</span><span class="guide-arrow">→</span></div>
+    </a>
+    <a href="guides/common-app.html" class="guide-card">
+      <span class="guide-system sys-all">✦ College Apps</span>
+      <div class="guide-title">How to Write the Common App When Your Story Doesn't Fit the Template</div>
+      <div class="guide-desc">Four schools. Three countries. A grading system nobody recognizes. The Common App wasn't built for your story — but your story is the strongest thing about your application.</div>
+      <div class="guide-meta"><span>10 min read</span><span class="guide-arrow">→</span></div>
+    </a>
+  </div>
+</div>
+
+<!-- COMPARE -->
+<div class="section container" id="compare">
+  <div class="section-label label-green">Tool</div>
+  <h2 class="section-heading">Curriculum comparison</h2>
+  <p class="section-sub">Side-by-side breakdowns of how school systems compare — what transfers, what doesn't, and what you'll have to explain yourself.</p>
+  <div class="compare-wrap">
+    <div class="compare-controls">
+      <div class="compare-title">How the systems stack up</div>
+      <div class="toggle-group">
+        <button class="toggle-btn active" onclick="switchCompare('ng', this)">Nigeria vs US</button>
+        <button class="toggle-btn" onclick="switchCompare('my', this)">Malaysia vs US</button>
+        <button class="toggle-btn" onclick="switchCompare('ng-my', this)">Nigeria vs Malaysia</button>
+      </div>
+    </div>
+    <div id="compare-output"></div>
+  </div>
+</div>
+
+<!-- RESEARCH BANNER -->
+<div class="section container">
+  <div class="research-banner">
+    <div>
+      <h3>Help us build the first public dataset on transfer students</h3>
+      <p>We're collecting original research on what it's actually like to navigate multiple school systems. Takes 5 minutes. Your answers — anonymized — will be published as a public findings report.</p>
+    </div>
+    <a href="survey.html" class="btn-white">Take the survey →</a>
+  </div>
+</div>
+
+<!-- STORY COLLECTION -->
+<div class="section container" id="stories">
+  <div class="section-label label-amber">Community</div>
+  <h2 class="section-heading">Your story belongs here</h2>
+  <p class="section-sub">This site was built from one student's experience. But there are thousands of students who've navigated this same invisible maze — and haven't had anyone ask about it.</p>
+
+  <div class="story-collect-hero">
+    <h2>Share what you've been through.</h2>
+    <p>Moving between countries. Feeling behind in a new system. The day someone finally understood your transcript — or didn't. The first time you felt at home somewhere new. Whatever it was.</p>
+    <div class="story-prompts">
+      <div class="story-prompt-chip">"The thing nobody told me about moving schools was..."</div>
+      <div class="story-prompt-chip">"I felt most invisible when..."</div>
+      <div class="story-prompt-chip">"The moment I finally felt like I belonged was..."</div>
+      <div class="story-prompt-chip">"What I wish a counselor had understood was..."</div>
+    </div>
+    <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:1.5rem">Stories will be published anonymously once we have enough to share them properly. Right now we're collecting.</p>
+    <div class="story-form-inline">
+      <input type="email" class="story-email-field" placeholder="your@email.com" id="story-email">
+      <button class="btn-ink" onclick="handleStoryInterest()">Tell your story →</button>
+    </div>
+    <p id="story-interest-msg" style="display:none;margin-top:1rem;font-size:14px;color:rgba(255,255,255,0.8)">✓ We'll reach out soon with a short story form. Thank you.</p>
+  </div>
+
+  <div class="story-cards-grid">
+    <div class="story-card-placeholder">
+      <p>Stories coming soon.</p>
+      <small>We're collecting before we publish — so that when this page fills, it fills with real voices.</small>
+    </div>
+    <div class="story-card-placeholder">
+      <p>Your story could be first.</p>
+      <small>Submit above and we'll be in touch with a short form.</small>
+    </div>
+    <div class="story-card-placeholder">
+      <p>From students who've moved internationally, domestically, repeatedly.</p>
+      <small>Every background, every route.</small>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about-strip">
+  <div class="about-inner">
+    <div>
+      <div class="about-label">Who built this</div>
+      <p class="about-text">A current high school student who moved through <strong>Nigeria, Malaysia, California, and Virginia</strong>. Built this because the resource didn't exist and figuring it out alone gets old. Free forever. <a href="about.html" style="color:var(--green);font-weight:500">Read more →</a></p>
+    </div>
+    <div>
+      <div class="about-label">What this is not</div>
+      <p class="about-text">Not a school. Not a counseling service. Not advice written by someone who read about this once. Everything here comes from <strong>actually living it</strong> — the wrong classrooms, the invisible credentials, the moments nobody warns you about.</p>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="section container" id="newsletter">
+  <div class="signup-block">
+    <h2>Join the research community.</h2>
+    <p>New guides, research findings, and student stories — straight to your inbox. Free forever.</p>
+    <form id="nl-form" action="https://formspree.io/f/xeewajzp" method="POST" onsubmit="handleNewsletter(event)">
+      <input type="hidden" name="_subject" value="Newsletter Signup — Third Culture Compass">
+      <div class="email-row">
+        <input class="email-field" type="email" name="email" placeholder="your@email.com" required>
+        <button type="submit" class="email-submit">Stay updated</button>
+      </div>
+    </form>
+    <p class="email-note" id="nl-msg">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Third Culture Compass · <a href="about.html" style="color:inherit">About</a> · <a href="survey.html" style="color:inherit">Research</a> · Founded by a Third Culture Kid · Free forever</p>
+</footer>
+
+<script>
+const compareData = {
+  ng: {
+    heads: ['Category', 'Nigeria (WAEC/NECO)', 'United States', 'Verdict'],
+    rows: [
+      ['Grading scale', 'A1–F9 (A1 = top band)', 'A–F letter grades', 'varies'],
+      ['Advanced math', 'Further Mathematics — calculus, vectors, mechanics as a separate course', 'AP Calculus (optional, separate)', 'gap'],
+      ['Sciences', 'Physics, Chemistry, Biology as separate national board exams', 'Sequential individual courses, no national board', 'ok'],
+      ['Exit exam', 'WAEC/NECO — national standardized board exam', 'SAT/ACT optional + state graduation tests', 'gap'],
+      ['English', 'Literature and Language as two separate board exams', 'One combined English class', 'varies'],
+      ['US recognition', 'Rarely understood by counselors — no official equivalency chart', 'You will likely need to explain it yourself', 'gap'],
+    ]
+  },
+  my: {
+    heads: ['Category', 'Malaysia (SPM)', 'United States', 'Verdict'],
+    rows: [
+      ['Grading scale', 'A+ to G (A+ = top)', 'A–F letter grades', 'varies'],
+      ['Math', 'Additional Mathematics — rigorous, pre-calc level and beyond', 'Pre-Calc → AP Calculus (separate, optional)', 'ok'],
+      ['Sciences', 'Pure Science stream: Physics, Chemistry, Biology separately', 'Separate sequential courses per year', 'ok'],
+      ['Languages', 'Bahasa Malaysia required + English', 'English only as standard', 'gap'],
+      ['Exit exam', 'SPM national board exam at Form 5', 'State graduation requirements + SAT/ACT optional', 'gap'],
+      ['Credit transfer', 'Rarely accepted directly in US schools', 'Expect to re-take courses or test out', 'gap'],
+    ]
+  },
+  'ng-my': {
+    heads: ['Category', 'Nigeria (WAEC/NECO)', 'Malaysia (SPM)', 'Verdict'],
+    rows: [
+      ['Grading scale', 'A1–F9 (A1 = top)', 'A+ to G (A+ = top)', 'varies'],
+      ['Advanced math', 'Further Mathematics — separate advanced subject', 'Additional Mathematics — separate advanced subject', 'ok'],
+      ['Sciences', 'Physics, Chemistry, Biology as separate board exams', 'Same — separate subjects in Pure Science stream', 'ok'],
+      ['Language requirement', 'English required; local languages optional', 'Bahasa Malaysia required + English', 'varies'],
+      ['Exit exam format', 'WAEC/NECO national board', 'SPM national board', 'ok'],
+      ['International recognition', 'Mainly within West Africa', 'Better known in Commonwealth countries', 'varies'],
+    ]
+  }
+};
+
+function badgeClass(v) { return v==='gap'?'badge-gap':v==='ok'?'badge-ok':'badge-varies'; }
+function badgeLabel(v) { return v==='gap'?'Credit gap':v==='ok'?'Similar':'Varies'; }
+
+function renderCompare(key) {
+  const d = compareData[key];
+  let html = '<table class="compare-table"><thead><tr>';
+  d.heads.forEach(h => { html += `<th>${h}</th>`; });
+  html += '</tr></thead><tbody>';
+  d.rows.forEach(r => {
+    html += '<tr>';
+    r.forEach((cell, i) => {
+      if (i===3) html += `<td><span class="badge ${badgeClass(cell)}">${badgeLabel(cell)}</span></td>`;
+      else html += `<td${i===0?' class="td-cat"':''}>${cell}</td>`;
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('compare-output').innerHTML = html;
+}
+
+function switchCompare(key, btn) {
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCompare(key);
+}
+
+function handleStoryInterest() {
+  const email = document.getElementById('story-email').value;
+  if (!email) return;
+  fetch('https://formspree.io/f/xeewajzp', {
+    method: 'POST',
+    body: JSON.stringify({ email, _subject: 'Story Interest — Third Culture Compass' }),
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+  }).then(() => {
+    document.getElementById('story-interest-msg').style.display = 'block';
+    document.getElementById('story-email').style.display = 'none';
+    document.querySelector('.btn-ink').style.display = 'none';
+  }).catch(() => {
+    document.getElementById('story-interest-msg').style.display = 'block';
+  });
+}
+
+function handleNewsletter(e) {
+  e.preventDefault();
+  fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' } })
+    .then(() => {
+      document.getElementById('nl-form').style.display = 'none';
+      document.getElementById('nl-msg').textContent = "✓ You're on the list. We'll be in touch.";
+      document.getElementById('nl-msg').style.color = 'rgba(255,255,255,0.85)';
+      document.getElementById('nl-msg').style.fontSize = '15px';
+    }).catch(() => {
+      document.getElementById('nl-msg').textContent = "✓ You're on the list.";
+      document.getElementById('nl-msg').style.color = 'rgba(255,255,255,0.85)';
+    });
+}
+
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+
+renderCompare('ng');
+</script>
+</body>
+</html>
