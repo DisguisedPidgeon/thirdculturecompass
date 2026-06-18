@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share Your Experience — Third Culture Compass Research Survey</title>
+<meta name="description" content="Help us understand what it's really like to move between school systems. Takes 5 minutes. Your answers become part of original research that helps future students.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.survey-hero { padding: 4rem 2rem 3rem; border-bottom: 1px solid var(--ink-20); text-align: center; }
+.survey-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); background: var(--green-light); padding: 5px 14px; border-radius: 100px; margin-bottom: 1.5rem; }
+.survey-tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+.survey-hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+.survey-hero p { font-size: 17px; color: var(--ink-60); max-width: 520px; margin: 0 auto; font-weight: 300; line-height: 1.7; }
+
+.survey-wrap { max-width: 680px; margin: 0 auto; padding: 3rem 2rem; }
+
+.survey-why { background: var(--green-light); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; }
+.survey-why-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); font-weight: 500; margin-bottom: 0.5rem; }
+.survey-why p { font-size: 14px; color: var(--ink); line-height: 1.7; margin: 0; font-weight: 300; }
+
+.q-block { margin-bottom: 2rem; }
+.q-label { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 0.5rem; display: block; }
+.q-hint { font-size: 12px; color: var(--ink-60); margin-bottom: 0.6rem; }
+.q-num { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--amber); font-weight: 500; margin-bottom: 0.35rem; }
+
+input[type="text"], input[type="email"], select, textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; width: 100%;
+  padding: 11px 14px; border-radius: 8px;
+  border: 1px solid var(--ink-20); background: white;
+  outline: none; transition: border-color 0.15s;
+  color: var(--ink);
+}
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus { border-color: var(--green); }
+textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2318160F' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+
+.rating-group { display: flex; gap: 8px; flex-wrap: wrap; }
+.rating-btn { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; width: 42px; height: 42px; border-radius: 8px; border: 1px solid var(--ink-20); background: white; color: var(--ink-60); cursor: pointer; transition: all 0.15s; }
+.rating-btn:hover { border-color: var(--green); color: var(--green); }
+.rating-btn.selected { background: var(--green); color: white; border-color: var(--green); }
+
+.checkbox-group { display: flex; flex-direction: column; gap: 8px; }
+.checkbox-item { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 14px; color: var(--ink); }
+.checkbox-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--green); cursor: pointer; flex-shrink: 0; }
+
+.survey-divider { border: none; border-top: 1px solid var(--ink-20); margin: 2.5rem 0; }
+
+.submit-section { text-align: center; padding-top: 1rem; }
+.submit-section p { font-size: 13px; color: var(--ink-60); margin-bottom: 1.5rem; }
+.btn-submit { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; padding: 14px 40px; border-radius: 100px; background: var(--ink); color: white; border: none; cursor: pointer; transition: opacity 0.15s; }
+.btn-submit:hover { opacity: 0.75; }
+
+.success-block { text-align: center; padding: 4rem 2rem; }
+.success-block h2 { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 1rem; }
+.success-block p { font-size: 16px; color: var(--ink-60); max-width: 460px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.7; }
+.back-link { font-size: 14px; text-decoration: none; color: var(--green); font-weight: 500; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQ8YRN0RBS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FQ8YRN0RBS');
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-circle">🧭</div>
+    <span class="nav-logo-name">Third Culture Compass</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#guides">Guides</a></li>
+    <li><a href="index.html#compare">Compare</a></li>
+    <li><a href="index.html#guides">Guides</a></li>
+    <li><a href="index.html#newsletter" class="nav-pill">Get updates</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#guides">Guides</a>
+  <a href="index.html#compare">Compare</a>
+  <a href="index.html#guides">Guides</a>
+  <a href="survey.html">Take the Survey</a>
+  <a href="index.html#newsletter">Get updates →</a>
+</div>
+
+<div class="survey-hero">
+  <div class="survey-tag">Research survey</div>
+  <h1>Tell us what it was really like</h1>
+  <p>Takes 5 minutes. Your answers help us understand the transfer student experience — and become part of the first public dataset on navigating multiple school systems.</p>
+</div>
+
+<div class="survey-wrap">
+  <div class="survey-why">
+    <div class="survey-why-label">Why this matters</div>
+    <p>There's no public research on what it's actually like to move between school systems as a student. Your answers — anonymized — will be published as part of an original study. Every response makes the picture more accurate.</p>
+  </div>
+
+  <form id="survey-form" action="https://formspree.io/f/xeewajzp" method="POST">
+    <input type="hidden" name="_subject" value="Survey Response — Third Culture Compass">
+
+    <!-- Q1 -->
+    <div class="q-block">
+      <span class="q-num">Question 1 of 10</span>
+      <label class="q-label" for="q1">How many different school systems have you attended?</label>
+      <select name="q1_systems_count" id="q1" required>
+        <option value="">Select...</option>
+        <option>2 systems</option>
+        <option>3 systems</option>
+        <option>4 systems</option>
+        <option>5 or more systems</option>
+      </select>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-block">
+      <span class="q-num">Question 2 of 10</span>
+      <label class="q-label">Which systems have you moved through? (check all that apply)</label>
+      <div class="checkbox-group">
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="Nigeria (WAEC/NECO)"> Nigeria (WAEC/NECO)</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="Malaysia (SPM)"> Malaysia (SPM)</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="UK (GCSEs/A-levels)"> UK (GCSEs / A-levels)</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="US - California"> US — California</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="US - Virginia"> US — Virginia</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="US - Other state"> US — Other state</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="Ghana"> Ghana</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="India"> India (CBSE/ICSE)</label>
+        <label class="checkbox-item"><input type="checkbox" name="q2_systems" value="Other"> Other</label>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-block">
+      <span class="q-num">Question 3 of 10</span>
+      <label class="q-label" for="q3">Did your previous academic credits transfer successfully to your new school?</label>
+      <select name="q3_credits" id="q3" required>
+        <option value="">Select...</option>
+        <option>Yes, most of them transferred without issues</option>
+        <option>Partially — some transferred, some didn't</option>
+        <option>No, very few or none transferred</option>
+        <option>I'm not sure / nobody explained it to me</option>
+      </select>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-block">
+      <span class="q-num">Question 4 of 10</span>
+      <label class="q-label">On a scale of 1–10, how well did your school counselor understand your previous education system?</label>
+      <p class="q-hint">1 = completely clueless, 10 = fully understood it</p>
+      <div class="rating-group" id="q4-rating">
+        <input type="hidden" name="q4_counselor_understanding" id="q4-val">
+        <button type="button" class="rating-btn" onclick="setRating('q4', 1)">1</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 2)">2</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 3)">3</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 4)">4</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 5)">5</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 6)">6</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 7)">7</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 8)">8</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 9)">9</button>
+        <button type="button" class="rating-btn" onclick="setRating('q4', 10)">10</button>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-block">
+      <span class="q-num">Question 5 of 10</span>
+      <label class="q-label">On a scale of 1–10, how strong was your sense of belonging in your new school during the first month?</label>
+      <p class="q-hint">1 = felt completely invisible, 10 = felt immediately at home</p>
+      <div class="rating-group" id="q5-rating">
+        <input type="hidden" name="q5_belonging" id="q5-val">
+        <button type="button" class="rating-btn" onclick="setRating('q5', 1)">1</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 2)">2</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 3)">3</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 4)">4</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 5)">5</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 6)">6</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 7)">7</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 8)">8</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 9)">9</button>
+        <button type="button" class="rating-btn" onclick="setRating('q5', 10)">10</button>
+      </div>
+    </div>
+
+    <hr class="survey-divider">
+
+    <!-- Q6 -->
+    <div class="q-block">
+      <span class="q-num">Question 6 of 10</span>
+      <label class="q-label" for="q6">What was the hardest academic adjustment when you moved to a new school system?</label>
+      <p class="q-hint">Be as specific as you want — your answer may become part of a published finding.</p>
+      <textarea name="q6_hardest_academic" id="q6" placeholder="e.g. My Further Mathematics credits didn't exist in the US system. Nobody knew what WAEC was..."></textarea>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-block">
+      <span class="q-num">Question 7 of 10</span>
+      <label class="q-label" for="q7">What was the hardest social adjustment?</label>
+      <textarea name="q7_hardest_social" id="q7" placeholder="e.g. Groups were already formed. I felt like I was joining mid-season of a show I'd never watched..."></textarea>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-block">
+      <span class="q-num">Question 8 of 10</span>
+      <label class="q-label" for="q8">What's one thing you wish someone had told you before you moved to a new school system?</label>
+      <textarea name="q8_wish_told" id="q8" placeholder="e.g. That it's okay to not belong immediately. That the reset is normal..."></textarea>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-block">
+      <span class="q-num">Question 9 of 10</span>
+      <label class="q-label" for="q9">Did you ever have a moment where a teacher or counselor genuinely understood your background? What happened?</label>
+      <textarea name="q9_understood" id="q9" placeholder="It's okay if the answer is no — that's a finding too."></textarea>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-block">
+      <span class="q-num">Question 10 of 10</span>
+      <label class="q-label" for="q10">Your email (optional — only if you'd like to be featured in a future story or notified when findings are published)</label>
+      <input type="email" name="email" id="q10" placeholder="your@email.com">
+    </div>
+
+    <div class="submit-section">
+      <p>Your response is anonymous unless you provide your email above.<br>Results will be published as part of original research on the third culture student experience.</p>
+      <button type="submit" class="btn-submit">Submit my experience →</button>
+    </div>
+  </form>
+
+  <div id="survey-success" class="success-block" style="display:none">
+    <div style="font-size:3rem;margin-bottom:1rem">✓</div>
+    <h2>Thank you.</h2>
+    <p>Your response has been recorded. When we publish our first findings report, we'll share it publicly on the site — and notify you by email if you provided one.</p>
+    <a href="index.html" class="back-link">← Back to Third Culture Compass</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Third Culture Compass · Founded by a Third Culture Kid · Free forever</p>
+</footer>
+
+<script>
+function setRating(q, val) {
+  document.getElementById(q + '-val').value = val;
+  document.querySelectorAll('#' + q + '-rating .rating-btn').forEach((btn, i) => {
+    btn.classList.toggle('selected', i + 1 === val);
+  });
+}
+
+document.getElementById('survey-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch(this.action, {
+    method: 'POST',
+    body: new FormData(this),
+    headers: { 'Accept': 'application/json' }
+  }).then(r => {
+    document.getElementById('survey-form').style.display = 'none';
+    document.getElementById('survey-success').style.display = 'block';
+  }).catch(() => {
+    document.getElementById('survey-form').style.display = 'none';
+    document.getElementById('survey-success').style.display = 'block';
+  });
+});
+
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+</script>
+</body>
+</html>
