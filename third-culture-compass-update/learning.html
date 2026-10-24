@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What We're Learning — Third Culture Compass</title>
+<meta name="description" content="Early observations from a small, informal student survey on cultural transition, belonging, and identity. Not a formal study.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="What We're Learning — Third Culture Compass">
+<meta property="og:description" content="Early observations from a small, informal student survey on belonging, transition, and cultural identity.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.learning-hero {
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid var(--ink-20);
+}
+.learning-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--green);
+  background: var(--green-light);
+  padding: 5px 14px; border-radius: 100px; margin-bottom: 1.5rem;
+}
+.learning-tag::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--green); }
+.learning-hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.learning-hero p {
+  font-size: 17px; color: var(--ink-60);
+  max-width: 540px; font-weight: 300; line-height: 1.7;
+}
+
+/* STATUS BAR */
+.status-bar {
+  background: var(--sand);
+  border-bottom: 1px solid var(--ink-20);
+  padding: 1rem 2rem;
+}
+.status-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+.status-left {
+  font-size: 13px; color: var(--ink-60);
+  font-weight: 300;
+}
+.status-left strong { font-weight: 500; color: var(--ink); }
+.status-counts {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+}
+.status-count {
+  text-align: center;
+}
+.count-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem; font-weight: 700;
+  letter-spacing: -0.03em; color: var(--ink);
+  line-height: 1;
+}
+.count-label {
+  font-size: 11px; color: var(--ink-60); margin-top: 2px;
+}
+
+/* BODY */
+.learning-body { padding: 4rem 2rem; }
+
+.section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; margin-bottom: 0.6rem; }
+.label-green { color: var(--green); }
+.label-amber { color: var(--amber); }
+.section-heading { font-family: 'Fraunces', serif; font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.75rem; }
+.section-sub { font-size: 15px; color: var(--ink-60); font-weight: 300; line-height: 1.7; margin-bottom: 2.5rem; max-width: 580px; }
+
+/* COLLECTING NOTICE */
+.collecting-notice {
+  background: var(--ink); color: white;
+  border-radius: 14px; padding: 2rem 2.25rem;
+  margin-bottom: 3rem;
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: 2rem;
+}
+.collecting-notice h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem; font-weight: 500;
+  color: white; margin-bottom: 0.5rem;
+}
+.collecting-notice p {
+  font-size: 14px; color: rgba(255,255,255,0.6);
+  line-height: 1.65; font-weight: 300;
+}
+.btn-survey {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 500;
+  padding: 10px 20px; border-radius: 100px;
+  background: var(--green); color: white;
+  text-decoration: none; white-space: nowrap;
+  transition: opacity 0.15s; display: inline-block;
+}
+.btn-survey:hover { opacity: 0.8; }
+
+/* PATTERNS */
+.patterns-grid {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--ink-20);
+  border: 1px solid var(--ink-20);
+  border-radius: 14px; overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.pattern-card {
+  background: white; padding: 2rem 2.25rem;
+  display: grid; grid-template-columns: 48px 1fr;
+  gap: 1.5rem; align-items: start;
+}
+
+.pattern-num {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem; font-weight: 700;
+  color: var(--ink-20); line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pattern-label {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--green);
+  font-weight: 500; margin-bottom: 0.5rem;
+}
+
+.pattern-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem; font-weight: 600;
+  line-height: 1.25; margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.pattern-desc {
+  font-size: 14px; color: var(--ink-60);
+  line-height: 1.7; font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.pattern-stat {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--ink-60);
+  background: var(--sand); border-radius: 100px;
+  padding: 4px 12px;
+}
+
+.stat-pending {
+  display: inline-block;
+  font-size: 10px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  background: #FEF3C7; color: #92400E;
+  padding: 2px 8px; border-radius: 100px;
+}
+.stat-confirmed {
+  display: inline-block;
+  font-size: 10px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  background: #D1FAE5; color: #065F46;
+  padding: 2px 8px; border-radius: 100px;
+}
+
+.pattern-quote {
+  font-family: 'Fraunces', serif;
+  font-style: italic; font-size: 14px;
+  color: var(--ink); line-height: 1.65;
+  border-left: 2px solid var(--green);
+  padding-left: 1rem; margin-top: 1rem;
+  opacity: 0.85;
+}
+
+/* RESEARCH QUESTIONS */
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem; margin-bottom: 3rem;
+}
+
+.question-card {
+  background: white; border: 1px solid var(--ink-20);
+  border-radius: 12px; padding: 1.5rem;
+}
+
+.question-num {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--amber);
+  font-weight: 500; margin-bottom: 0.5rem;
+}
+
+.question-text {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 500;
+  line-height: 1.4; color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.question-why {
+  font-size: 13px; color: var(--ink-60);
+  line-height: 1.6; font-weight: 300;
+}
+
+/* FINDINGS PLACEHOLDER */
+.findings-placeholder {
+  background: var(--green-light);
+  border-radius: 14px; padding: 2.5rem;
+  text-align: center; margin-bottom: 3rem;
+}
+.findings-placeholder h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem; font-weight: 600;
+  margin-bottom: 0.75rem; color: var(--ink);
+}
+.findings-placeholder p {
+  font-size: 15px; color: var(--ink-60);
+  line-height: 1.7; font-weight: 300;
+  max-width: 480px; margin: 0 auto 1.5rem;
+}
+.findings-goal {
+  display: flex; justify-content: center;
+  gap: 2rem; flex-wrap: wrap;
+}
+.goal-item { text-align: center; }
+.goal-num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-weight: 700;
+  letter-spacing: -0.03em; color: var(--green);
+  line-height: 1;
+}
+.goal-label { font-size: 12px; color: var(--ink-60); margin-top: 4px; }
+
+/* METHODOLOGY */
+.method-block {
+  border: 1px solid var(--ink-20);
+  border-radius: 14px; overflow: hidden;
+  margin-bottom: 3rem;
+}
+.method-header {
+  background: var(--sand);
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--ink-20);
+}
+.method-header-label {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--ink-60);
+  font-weight: 500; margin-bottom: 0.25rem;
+}
+.method-header h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 500;
+}
+.method-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+}
+.method-item {
+  padding: 1.5rem 1.75rem;
+  border-right: 1px solid var(--ink-20);
+}
+.method-item:last-child { border-right: none; }
+.method-item-label {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--green);
+  font-weight: 500; margin-bottom: 0.4rem;
+}
+.method-item-text {
+  font-size: 13px; color: var(--ink);
+  line-height: 1.6; font-weight: 300;
+}
+
+@media (max-width: 700px) {
+  .collecting-notice { grid-template-columns: 1fr; }
+  .pattern-card { grid-template-columns: 1fr; gap: 0.75rem; }
+  .pattern-num { font-size: 1.2rem; }
+  .method-body { grid-template-columns: 1fr; }
+  .method-item { border-right: none; border-bottom: 1px solid var(--ink-20); }
+  .method-item:last-child { border-bottom: none; }
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQ8YRN0RBS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FQ8YRN0RBS');
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-circle">🧭</div>
+    <span class="nav-logo-name">Third Culture Compass</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#guides">Guides</a></li>
+    <li><a href="index.html#compare">Compare</a></li>
+    <li><a href="compass.html">Identity Compass</a></li>
+    <li><a href="story.html">Our Story</a></li>
+    <li><a href="learning.html" style="color:var(--ink)">What We're Learning</a></li>
+    <li><a href="survey.html">Survey</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#newsletter" class="nav-pill">Get updates</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html#guides">Guides</a>
+  <a href="index.html#compare">Compare</a>
+  <a href="compass.html">Identity Compass</a>
+  <a href="story.html">Our Story</a>
+  <a href="learning.html">What We're Learning</a>
+  <a href="survey.html">Survey</a>
+  <a href="about.html">About</a>
+  <a href="index.html#newsletter">Get updates →</a>
+</div>
+
+<div class="learning-hero container-narrow">
+  <div class="learning-tag">Early observations</div>
+  <h1>What We're Learning</h1>
+  <p>Patterns emerging from student experiences of belonging, transition, and cultural identity. This page updates as responses come in. It is an informal student project, so treat everything here as early observations, not findings.</p>
+</div>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div class="status-inner">
+    <div class="status-left">
+      Data collection began <strong>August 2026</strong> · Last updated <strong>October 19, 2026</strong>
+    </div>
+    <div class="status-counts">
+      <div class="status-count">
+        <div class="count-num" id="response-count" data-response-count>7</div>
+        <div class="count-label">responses collected</div>
+      </div>
+      <div class="status-count">
+        <div class="count-num">6+</div>
+        <div class="count-label">school systems</div>
+      </div>
+      <div class="status-count">
+        <div class="count-num">6+</div>
+        <div class="count-label">countries represented</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="learning-body container">
+
+  <!-- COLLECTING NOTICE -->
+  <div class="collecting-notice">
+    <div>
+      <h3>We're actively collecting responses right now.</h3>
+      <p>The patterns below are based on early observations and the founding experience of this project. As survey responses come in, this page will update with real data and direct quotes — anonymized. If you haven't taken the survey yet, your answer changes what this page says.</p>
+    </div>
+    <a href="survey.html" class="btn-survey">Take the survey →</a>
+  </div>
+
+  <div class="limits-note">
+    <strong>Read this first.</strong> This is a small, self-selected group of students who found the survey themselves, so it can't tell us what is true for all students, and the numbers below are very small. Some patterns come from the founder's own experience and are marked as hypotheses. Tallies on patterns 03, 05 and 06 were counted at 6 responses and will be recounted as more come in. This is an informal student project, not a formal study.
+  </div>
+
+  <!-- EMERGING PATTERNS -->
+  <div class="section-label label-green">Emerging patterns</div>
+  <h2 class="section-heading">What the experiences suggest so far</h2>
+  <p class="section-sub">These patterns are drawn from the founding experience and early observations. Numbers will populate as survey data comes in. Each pattern points to a question worth looking into properly.</p>
+
+  <div class="patterns-grid">
+
+    <div class="pattern-card">
+      <div class="pattern-num">01</div>
+      <div>
+        <div class="pattern-label">Belonging pattern</div>
+        <div class="pattern-title">Observation before participation</div>
+        <div class="pattern-desc">In the founder's experience, and we suspect for many students who've moved multiple times, there's a period of watching before joining — mapping the social landscape before making a move. We think it isn't shyness but learned intelligence about new environments, and we're asking whether other students describe it too.</div>
+        <div class="pattern-stat">
+          <span class="stat-pending">Pending data</span>
+          <span>Hypothesis, not yet tested</span>
+        </div>
+        <div class="pattern-quote">"I wasn't sad exactly. I just wasn't there yet — and I had no way to signal that I wanted to be." — Founder's experience</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">02</div>
+      <div>
+        <div class="pattern-label">Recognition pattern</div>
+        <div class="pattern-title">Names are disproportionately significant</div>
+        <div class="pattern-desc">In the founder's experience, having one's name learned correctly — or mispronounced and left uncorrected — marked the difference between feeling seen and feeling invisible. We're asking whether other students remember specifically who learned their name, and when.</div>
+        <div class="pattern-stat">
+          <span class="stat-pending">Pending data</span>
+          <span>Referenced in founding story</span>
+        </div>
+        <div class="pattern-quote">"I memorized names fast — not because it was required, but because I'd seen how differently a kid looks at you when you say their name without hesitating." — Founder's experience</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">03</div>
+      <div>
+        <div class="pattern-label">Adaptation pattern</div>
+        <div class="pattern-title">Belonging is relational, not locational</div>
+        <div class="pattern-desc">Students rarely describe belonging as feeling at home in a place. They describe it as feeling at home with a person — one friend, one teacher, one moment of being recognized. The place is incidental. The relationship is the thing.</div>
+        <div class="pattern-stat">
+          <span class="stat-confirmed">Early signal</span>
+          <span>2 of 4 respondents so far</span>
+        </div>
+        <div class="pattern-quote">"[They] didn't understand my situation exactly, but she knew what it was like to swap to a new system and go in blind." — Respondent, 5+ systems</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">04</div>
+      <div>
+        <div class="pattern-label">Reset pattern</div>
+        <div class="pattern-title">Multiple moves create a specific kind of emotional numbness</div>
+        <div class="pattern-desc">In the founder's experience, moving more than twice doesn't remove the ability to connect, but it can make each start feel less intense. The reset still costs something — but you learn that it ends, and that knowledge changes how you navigate each new start. We're asking whether others describe the same thing.</div>
+        <div class="pattern-stat">
+          <span class="stat-pending">Pending data</span>
+          <span>Hypothesis based on founding experience</span>
+        </div>
+        <div class="pattern-quote">"After enough resets, you don't stop making friends — you just get numb to it. You know how to start. You also know how it ends." — Founder's experience</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">05</div>
+      <div>
+        <div class="pattern-label">Transfer pattern</div>
+        <div class="pattern-title">Academic disruption is consistently underestimated by schools</div>
+        <div class="pattern-desc">Students moving between systems report that counselors and teachers regularly underestimate the academic complexity of their transition — not just the social one. Curriculum gaps, grading system differences, and unrecognized credentials create real disadvantages that aren't visible from the outside.</div>
+        <div class="pattern-stat">
+          <span class="stat-confirmed">Early signal</span>
+          <span>3 of 4 respondents rated counselor understanding 1–2 on the survey's rating scale (counted at 6 responses); the 7th response rated it 2 out of 10</span>
+        </div>
+        <div class="pattern-quote">"It's a nightmare trying to figure out what classes match up with what." — Respondent, 5+ systems</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">06</div>
+      <div>
+        <div class="pattern-label">Identity pattern</div>
+        <div class="pattern-title">Competence is system-relative, and nobody warns you</div>
+        <div class="pattern-desc">Being seen as capable isn't stable across systems — a student who's advanced in one curriculum can be read as behind in another, with no warning the swap is coming. That whiplash isn't just logistical (grade placement, resat years when systems run on different academic calendars) — it produces real doubt about one's own ability, and can even get misread as a behavior problem in both directions: bored and "daydreaming" when too far ahead, in trouble for low marks when too far behind.</div>
+        <div class="pattern-stat">
+          <span class="stat-confirmed">Early signal</span>
+          <span>2 of 5 respondents so far</span>
+        </div>
+        <div class="pattern-quote">"I was seen as stupid in some systems. I was seen as gifted in others. I hate how I can't just be one or the other. Am I smart or not?" — Respondent, 5+ systems</div>
+        <div class="pattern-quote">"I was so far ahead in my first transfer that I was bored and my teacher told my parents that I daydreamed too much... Next transfer I was behind and got into trouble for low marks." — Respondent, 3 systems</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">07</div>
+      <div>
+        <div class="pattern-label">Cultural pattern</div>
+        <div class="pattern-title">Whether you ask for help depends on where you're from, not just how lost you are</div>
+        <div class="pattern-desc">One respondent from a hierarchical, elder-deferential culture described holding back from asking teachers for help even when they badly needed it — turning instead to other students, some just as lost as they were. A second described a related problem: used to being quiet and obedient, they were marked down for classroom behavior in a system that rewarded active, talkative students. Schools that assume struggling students will simply speak up may miss the students least likely to.</div>
+        <div class="pattern-stat">
+          <span class="stat-pending">Pending data</span>
+          <span>Described by 2 of 7 respondents so far, in different ways — worth tracking</span>
+        </div>
+        <div class="pattern-quote">"Coming from a hierarchical culture with outsize respect for elders and authority figures, I always held back from asking them for help... I asked other kids instead, some of whom were just as clueless as me." — Respondent, 3 systems</div>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-num">08</div>
+      <div>
+        <div class="pattern-label">Family pattern</div>
+        <div class="pattern-title">Parents can be a bigger barrier than the school itself</div>
+        <div class="pattern-desc">Two respondents independently pointed to their own parents — not teachers, not counselors — as the real gap in support. Both described parents who treated a major system transition as logistically simple ("school is school") and had no framework for what the shift would actually demand academically or emotionally. When parents don't understand the transition either, a student can end up navigating it with no informed adult in their corner at all.</div>
+        <div class="pattern-stat">
+          <span class="stat-confirmed">Early signal</span>
+          <span>2 of 7 respondents so far, independently; a 3rd said their parents understood the transition “not at all”</span>
+        </div>
+        <div class="pattern-quote">"I wish someone had told my parents that they needed to understand the actual consequence of moving me into the final year of high school. In their mind, they just thought school is school." — Respondent, 2 systems</div>
+        <div class="pattern-quote">"My parents were my bigger problem. They did not understand the nuances of raising TCKs... excessively strict and rigid and no understanding of the value of extracurriculars." — Respondent, 3 systems</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RESEARCH QUESTIONS -->
+  <div class="section-label label-amber">Open questions</div>
+  <h2 class="section-heading">What we're trying to find out</h2>
+  <p class="section-sub">These are the questions driving our data collection. If you've moved between school systems, your survey response directly informs these.</p>
+
+  <div class="questions-grid">
+    <div class="question-card">
+      <div class="question-num">Question 01</div>
+      <div class="question-text">Does the number of school transitions correlate with reported sense of belonging?</div>
+      <div class="question-why">We expect more moves = lower initial belonging scores, but higher eventual adaptation speed. The survey will tell us if that's true.</div>
+    </div>
+    <div class="question-card">
+      <div class="question-num">Question 02</div>
+      <div class="question-text">Do students from Commonwealth systems (Nigeria, Malaysia, UK) face more or less credit recognition difficulty than non-Commonwealth students?</div>
+      <div class="question-why">Our guess is that Commonwealth-style curricula map onto each other more easily. Does that translate to better recognition in US schools?</div>
+    </div>
+    <div class="question-card">
+      <div class="question-num">Question 03</div>
+      <div class="question-text">What single intervention most consistently improved a transfer student's sense of belonging?</div>
+      <div class="question-why">Counselors keep saying "join a club." We want to know what actually worked — from the students themselves.</div>
+    </div>
+    <div class="question-card">
+      <div class="question-num">Question 04</div>
+      <div class="question-text">Is the "observer before participant" pattern more common in students who moved internationally vs. domestically?</div>
+      <div class="question-why">Our hypothesis: international moves produce more observation behavior. But domestic moves may be underestimated.</div>
+    </div>
+    <div class="question-card">
+      <div class="question-num">Question 05</div>
+      <div class="question-text">How do students describe the difference between performing okayness and actually feeling okay?</div>
+      <div class="question-why">This is the gap nobody talks about. New students often perform fine. How long before it becomes real — and what makes the difference?</div>
+    </div>
+    <div class="question-card">
+      <div class="question-num">Question 06</div>
+      <div class="question-text">What role does a single adult — teacher, counselor, coach — play in the transition experience?</div>
+      <div class="question-why">Early responses hint that one adult who "gets it" matters a lot, though some students describe never having that moment. We want to understand what "getting it" actually looks like.</div>
+    </div>
+  </div>
+
+  <!-- METHODOLOGY -->
+  <div class="method-block">
+    <div class="method-header">
+      <div class="method-header-label">How we're doing this</div>
+      <h3>Methods and limits</h3>
+    </div>
+    <div class="method-body">
+      <div class="method-item">
+        <div class="method-item-label">Data source</div>
+        <div class="method-item-text">Voluntary survey responses from students who've moved between school systems. 12 core questions plus a few optional extras. Anonymous unless the respondent chooses to share an email.</div>
+      </div>
+      <div class="method-item">
+        <div class="method-item-label">Analysis</div>
+        <div class="method-item-text">Informal reading of open-text answers for themes, and simple counts of the rating questions. No statistical testing, because the sample is far too small.</div>
+      </div>
+      <div class="method-item">
+        <div class="method-item-label">Publication</div>
+        <div class="method-item-text">Early observations are shared on this page as they emerge. No paywall. This is for the students who need it.</div>
+      </div>
+      <div class="method-item">
+        <div class="method-item-label">Ethics</div>
+        <div class="method-item-text">All quotes anonymized. No personal data published without explicit consent. Respondents can ask for removal at any time through the <a href="about.html#contact" style="color:var(--green);font-weight:500">contact form</a>.</div>
+      </div>
+      <div class="method-item">
+        <div class="method-item-label">Limits</div>
+        <div class="method-item-text">A small, self-selected sample, so these are early observations, not findings that apply to all students. An informal student project without institutional review.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINDINGS GOAL -->
+  <div class="findings-placeholder">
+    <h3>First summary: coming soon</h3>
+    <p>We'll share a first summary once we have enough responses to say something meaningful. Everything on this page is an early observation, not a confirmed finding. Help us get there.</p>
+    <div class="findings-goal">
+      <div class="goal-item">
+        <div class="goal-num" data-response-count>7</div>
+        <div class="goal-label">responses so far</div>
+      </div>
+      <div class="goal-item">
+        <div class="goal-num">50</div>
+        <div class="goal-label">responses we're aiming for before a first summary</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025–2026 Third Culture Compass · <a href="about.html" style="color:inherit">About</a> · <a href="survey.html" style="color:inherit">Survey</a> · <a href="about.html#contact" style="color:inherit">Contact</a> · Founded by a Third Culture Kid · Free forever</p>
+  <p style="margin-top:6px;opacity:.75">A student-run project. Not a school, nonprofit, or counseling service.</p>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+
+// Update this one number as responses arrive; it fills every response counter on the page.
+var RESPONSE_COUNT = 7;
+document.querySelectorAll('[data-response-count]').forEach(function (el) { el.textContent = RESPONSE_COUNT; });
+</script>
+</body>
+</html>
